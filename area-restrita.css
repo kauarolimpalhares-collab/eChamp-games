@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100vh; font-family: Arial, Helvetica, sans-serif; background: #050719; color: #fff; }
+.header-restrita { min-height: 90px; padding: 0 5%; display:flex; align-items:center; justify-content:space-between; background:#040514; border-bottom:1px solid rgba(255,255,255,.1); }
+.logo { display:flex; flex-direction:column; color:#fff; text-decoration:none; font-size:24px; }
+.logo strong { font-size:28px; } .logo strong span { color:#ff007f; } .logo small { font-size:9px; letter-spacing:2px; }
+#logout { padding:12px 24px; border:1px solid #707183; border-radius:8px; background:transparent; color:#fff; font-weight:bold; cursor:pointer; }
+#logout:hover { border-color:#ff0088; color:#ff0088; }
+.restrita-container { width:min(1050px,90%); margin:70px auto; }
+.welcome { margin-bottom:35px; } .eyebrow { color:#ff0088; font-weight:bold; letter-spacing:2px; font-size:12px; } h1 { font-size:clamp(38px,5vw,58px); margin:12px 0; } h1 span { color:#ff0088; } .welcome p { color:#bfc1ce; line-height:1.6; }
+.perfil-card { padding:25px; display:flex; align-items:center; justify-content:space-between; gap:20px; background:#0d1029; border:1px solid #3d1642; border-radius:14px; margin-bottom:25px; }
+.label { color:#aeb0bd; font-size:13px; } .perfil-card h2 { margin-top:5px; } .status { color:#6ff0b1; font-weight:bold; font-size:14px; }
+.acessos { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; } .acessos article { padding:24px; background:#0d1029; border:1px solid #23264a; border-radius:12px; } .acessos strong { display:block; margin-bottom:10px; } .acessos p { color:#bfc1ce; line-height:1.5; font-size:14px; }
+.aviso { margin-top:30px; padding:16px; border-left:3px solid #ff0088; background:#0a0c20; color:#aaa; line-height:1.5; font-size:13px; }
+@media(max-width:800px){ .acessos{grid-template-columns:1fr 1fr;} .perfil-card{align-items:flex-start; flex-direction:column;} }
+@media(max-width:500px){ .header-restrita{padding:15px 6%;} .acessos{grid-template-columns:1fr;} .restrita-container{margin-top:45px;} }

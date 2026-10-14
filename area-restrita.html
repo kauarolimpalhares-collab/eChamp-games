@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restrita | eChamp</title>
+    <link rel="stylesheet" href="area-restrita.css">
+</head>
+<body>
+    <header class="header-restrita">
+        <a href="index.html" class="logo">🏆 <strong>e<span>CHAMP</span></strong><small>GESTÃO DE CAMPEONATOS</small></a>
+        <button id="logout">Sair</button>
+    </header>
+
+    <main class="restrita-container">
+        <section class="welcome">
+            <span class="eyebrow">ÁREA RESTRITA</span>
+            <h1>Bem-vindo, <span id="nomeUsuario">usuário</span>!</h1>
+            <p>Esta área representa o espaço disponível para usuários autenticados.</p>
+        </section>
+
+        <section class="perfil-card">
+            <div>
+                <span class="label">Perfil de demonstração</span>
+                <h2>Administrador</h2>
+            </div>
+            <span class="status">Acesso autorizado</span>
+        </section>
+
+        <section class="acessos">
+            <article><strong>👥 Times e jogadores</strong><p>Gerenciar participantes cadastrados.</p></article>
+            <article><strong>🏆 Campeonatos</strong><p>Criar e acompanhar competições.</p></article>
+            <article><strong>⚡ Confrontos</strong><p>Organizar partidas e confrontos.</p></article>
+            <article><strong>📊 Resultados</strong><p>Registrar e consultar resultados.</p></article>
+        </section>
+
+        <p class="aviso">Demonstração acadêmica: o controle de acesso é feito somente no front-end e não substitui uma autenticação real com backend.</p>
+    </main>
+
+    <script>
+        const usuario = sessionStorage.getItem("echampUsuario");
+        if (!usuario) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("nomeUsuario").textContent = usuario;
+        }
+
+        document.getElementById("logout").addEventListener("click", () => {
+            sessionStorage.removeItem("echampUsuario");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

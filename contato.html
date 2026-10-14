@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | eChamp</title>
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="eChamp - início">
+      <span class="trofeu">🏆</span>
+      <span><strong>e<span>CHAMP</span></strong><small>GESTÃO DE CAMPEONATOS</small></span>
+    </a>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="campeonatos.html">Campeonatos</a>
+      <a href="index.html#como-funciona">Como funciona</a>
+      <a href="contato.html" class="ativo">Contato</a>
+      <a href="login.html" class="btn-entrar">Login</a>
+      <a href="contato.html" class="btn-criar">Criar conta</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato-hero">
+      <div class="texto">
+        <p class="eyebrow">FALE COM O eCHAMP</p>
+        <h1>Entre em <span>contato</span> conosco.</h1>
+        <p>
+          Tire dúvidas, peça suporte ou envie uma mensagem sobre a gestão
+          do seu campeonato. Nossa equipe receberá sua solicitação.
+        </p>
+      </div>
+
+      <form id="formContato" class="formulario">
+        <h2>Envie sua mensagem</h2>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="contato">E-mail ou telefone</label>
+        <input type="text" id="contato" name="contato"
+               placeholder="seuemail@exemplo.com ou (11) 99999-9999" required>
+
+        <label for="motivo">Mensagem / motivo do contato</label>
+        <textarea id="motivo" name="motivo" rows="6"
+                  placeholder="Ex.: Quero tirar uma dúvida sobre a criação de um campeonato." required></textarea>
+
+        <button type="submit">Enviar mensagem →</button>
+        <p id="mensagemSucesso" class="sucesso" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>🏆 eCHAMP</strong>
+    <span>Gestão de campeonatos</span>
+  </footer>
+
+  <script src="contato.js"></script>
+</body>
+</html>

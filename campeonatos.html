@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campeonatos | eChamp</title>
+  <link rel="stylesheet" href="campeonatos.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="eChamp - início">
+      <span class="trofeu">🏆</span>
+      <span><strong>e<span>CHAMP</span></strong><small>GESTÃO DE CAMPEONATOS</small></span>
+    </a>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="campeonatos.html" class="ativo">Campeonatos</a>
+      <a href="index.html#como-funciona">Como funciona</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html" class="btn-entrar">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">COMPETIÇÕES DO eCHAMP</span>
+      <h1>Encontre um <span>campeonato</span></h1>
+      <p>Consulte as principais informações das competições cadastradas na plataforma.</p>
+    </section>
+
+    <section class="filtros" aria-label="Filtros de campeonatos">
+      <label for="busca">Pesquisar campeonato</label>
+      <input id="busca" type="search" placeholder="Digite o nome ou modalidade...">
+      <label for="status">Status</label>
+      <select id="status">
+        <option value="todos">Todos</option>
+        <option value="andamento">Em andamento</option>
+        <option value="inscricoes">Inscrições abertas</option>
+        <option value="encerrado">Encerrado</option>
+      </select>
+    </section>
+
+    <p id="resultadoBusca" class="resultado" aria-live="polite"></p>
+
+    <section id="listaCampeonatos" class="grid" aria-label="Lista de campeonatos"></section>
+
+    <section id="vazio" class="vazio" hidden>
+      <h2>Nenhum campeonato encontrado</h2>
+      <p>Tente outro nome, modalidade ou status.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>🏆 eCHAMP</strong>
+    <span>Gestão de campeonatos</span>
+  </footer>
+
+  <script src="campeonatos.js"></script>
+</body>
+</html>

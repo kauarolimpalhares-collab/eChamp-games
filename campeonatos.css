@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050719;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.navbar {
+  min-height: 90px;
+  padding: 16px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: rgba(4, 5, 20, .96);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.trofeu { font-size: 25px; }
+
+.logo strong {
+  display: block;
+  font-size: 25px;
+}
+
+.logo strong span, .eyebrow, h1 span { color: #ff007f; }
+
+.logo small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #c9c9d4;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
+}
+
+nav a:hover, nav a.ativo { color: #ff007f; }
+
+.btn-entrar {
+  border: 1px solid #777;
+  padding: 10px 17px;
+  border-radius: 8px;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  padding: 75px 0 90px;
+}
+
+.intro { text-align: center; margin-bottom: 35px; }
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  margin: 14px 0;
+  text-transform: uppercase;
+}
+
+.intro p {
+  color: #bfc1cc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 10px 16px;
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #292d4b;
+  border-radius: 12px;
+  background: #080b24;
+}
+
+.filtros label { font-size: 13px; font-weight: bold; color: #ddd; }
+
+.filtros label:first-child { grid-column: 1; }
+.filtros label:nth-of-type(2) { grid-column: 2; }
+
+input, select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #454a68;
+  border-radius: 8px;
+  background: #050719;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus, select:focus { border-color: #ff007f; }
+
+.resultado {
+  color: #aaa;
+  margin: 15px 2px;
+  min-height: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  background: #0a0d25;
+  border: 1px solid #303454;
+  border-radius: 14px;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ff007f;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.card h2 {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.status {
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #28152a;
+  color: #ff77b5;
+}
+
+.card p {
+  color: #aeb0bd;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+.dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dado {
+  border-top: 1px solid #292d4b;
+  padding-top: 10px;
+}
+
+.dado small {
+  display: block;
+  color: #777c92;
+  margin-bottom: 4px;
+}
+
+.dado strong { color: #eee; }
+
+.ver {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #ff007f;
+  padding: 11px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.vazio {
+  text-align: center;
+  padding: 60px 20px;
+  border: 1px dashed #454a68;
+  border-radius: 12px;
+  color: #aaa;
+}
+
+footer {
+  padding: 30px 8%;
+  background: #030412;
+  text-align: center;
+  color: #777;
+}
+
+footer strong {
+  display: block;
+  color: #ff007f;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .navbar { flex-direction: column; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid, .filtros { grid-template-columns: 1fr; }
+  .filtros label:first-child, .filtros label:nth-of-type(2) { grid-column: 1; }
+  .container { padding-top: 45px; }
+}

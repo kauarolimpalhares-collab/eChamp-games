@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | eChamp</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header class="header-login">
+        <a href="index.html" class="logo" aria-label="eChamp - início">
+            🏆 <strong>e<span>CHAMP</span></strong>
+            <small>GESTÃO DE CAMPEONATOS</small>
+        </a>
+        <a href="index.html" class="voltar">← Voltar para início</a>
+    </header>
+
+    <main class="login-container">
+        <section class="login-card">
+            <div class="login-heading">
+                <span class="eyebrow">ACESSO À PLATAFORMA</span>
+                <h1>Entrar no <span>eChamp</span></h1>
+                <p>Informe seus dados para acessar a área restrita.</p>
+            </div>
+
+            <form id="formLogin" novalidate>
+                <label for="usuario">Usuário ou e-mail</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário ou e-mail" autocomplete="username" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+
+                <button type="submit">Entrar →</button>
+
+                <p id="mensagemLogin" class="mensagem" role="alert"></p>
+            </form>
+
+            <div class="login-help">
+                <a href="#" id="esqueciSenha">Esqueci minha senha</a>
+                <span>•</span>
+                <a href="contato.html">Criar conta / Falar com a equipe</a>
+            </div>
+
+            <div class="demo-box">
+                <strong>Acesso de demonstração</strong>
+                <span>Usuário: <b>teste</b></span>
+                <span>Senha: <b>123</b></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>
